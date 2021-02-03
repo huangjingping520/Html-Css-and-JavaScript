@@ -127,3 +127,19 @@
 6. 文本格式化标签
 
     ![](https://cdn.jsdelivr.net/gh/huangjingping520/PicGo/文本格式化.png)
+7. 列表<br>
+    1. 无序列表
+    > 在文字前有一个黑点 
+    ```html
+    基础结构：
+    <ul>
+        <li></li>
+    </ul>
+    a：超链接
+    <ul>
+        <li>
+            <a href="链接地址" target = "_blank"(新窗口)></a>
+        </li>
+    </ul>
+    
+    ```
