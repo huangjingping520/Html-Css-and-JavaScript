@@ -37,6 +37,18 @@
     HTML4.01 ==> 严格、过渡、框架集
 
     XHTML ==> 严格的HTML，区分大小写，结束标记必须写上
+
+    DTD：文档类型声明，等同于DOCTYPE
+- head<br>
+    `<title>` 网页标题<br>
+    `<meta>` 用以告知文档的附加信息<br>
+    > charset : 字符集 中文开发网站常用UTF-8<br>
+    > name：<br>
+    > content：<br>
+    
+     `<head lang="en">` lang 表示告知网页主要语言
+- body<br>
+    网站内容
 ### 常用标签
 1. 标题
     ```html
@@ -112,4 +124,6 @@
             当今设置一个的时候，图片两者会相同
     -->
     ```
-    
+6. 文本格式化标签
+
+    ![](https://cdn.jsdelivr.net/gh/huangjingping520/PicGo/文本格式化.png)
