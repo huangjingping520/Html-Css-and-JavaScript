@@ -1,3 +1,11 @@
+<!--
+ * @Author: MerlinAlex
+ * @Date: 2020-10-27 22:00:21
+ * @LastEditTime: 2021-02-03 22:01:03
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \Html-Css-and-JavaScript\README.md
+-->
 # Html
 - 超文本标记语言
     - HyperText Markup Language
@@ -56,20 +64,20 @@
         `<br/>`没有任何属性
     4. 水平线<br>
         - 分割上下文
-        ```html
-        <hr/>
-        <!-- 
-        属性：
-        color:颜色
-        width:宽度  设置水平方向（默认单位是px）
-        size:尺寸  设置垂直方向（默认单位是px）
-        align:水平对齐方式
-            属性值：
-            left:居左
-            center：居中（默认值）
-            right：居右
-        -->        
-        ```
+    ```html
+    <hr/>
+    <!-- 
+    属性：
+    color:颜色
+    width:宽度  设置水平方向（默认单位是px）
+    size:尺寸  设置垂直方向（默认单位是px）
+    align:水平对齐方式
+        属性值：
+        left:居左
+        center：居中（默认值）
+        right：居右
+    -->        
+    ```
     5. 图片
     ```html
     <img src="" alt="">
@@ -79,10 +87,19 @@
             1. 网址
             2. 盘符
             相对路径：
+            1. 平级  直接写
+            2. 下一级  / + 名称
+            3. 上一级  ../ + 名称
+               上两级  ../../ + 名称
         常用图片格式：
             jpg/jpeg
             png（支持背景透明）
             gif（支持动图）
             psd（ps中保存的图片）
+        alt：
+            图片无法显示的时候显示的文字描述
+        title：
+            鼠标悬停的时候显示的文字描述
     -->
     ```
+    
