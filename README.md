@@ -129,7 +129,6 @@
     ![](https://cdn.jsdelivr.net/gh/huangjingping520/PicGo/文本格式化.png)
 7. 列表<br>
     1. 无序列表
-    > 在文字前有一个黑点 
     ```html
     基础结构：
     <ul>
@@ -141,5 +140,29 @@
             <a href="链接地址" target = "_blank"(新窗口)></a>
         </li>
     </ul>
-    
+    ul 和 li 的属性：
+        type：设置项目符号的类型
+            取值：
+            disc 黑色实心圆
+            circle 空心圆
+            square 实心矩形
+            none 不显示
     ```
+    2. 有序列表
+    ```html
+    <ol>
+        <li></li>
+    </ol>
+    属性：
+        type：设置符号的类型 1、a、A、I...
+        start：设置起始序号
+        reversed：倒序
+    ```
+    3. 自定义列表
+    ```html
+    <dl>
+        <dt>主题</dt>
+        <dd>描述</dd>
+    </dl>
+    ```
+    
