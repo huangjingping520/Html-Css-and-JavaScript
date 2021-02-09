@@ -165,4 +165,100 @@
         <dd>描述</dd>
     </dl>
     ```
-    
+8. 表格
+    ```html
+    <table border="5" align="center" width="600">
+        <caption>信息表</caption>
+        <tr bgcolor="pink">
+            <th colspan="3">学生基本信息</th>
+            <th colspan="2">成绩</th>
+        </tr>
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>专业</th>
+            <th>课程</th>
+            <th>分数</th>
+        </tr>
+        <tr align="center">
+            <td>球球</td>
+            <td>男</td>
+            <td rowspan="2">计算机</td>
+            <td rowspan="3">程序设计</td>
+            <td>68</td>
+        </tr>
+        <tr align="center">
+            <td>喃喃</td>
+            <td>女</td>
+            <td>89</td>
+        </tr>
+        <tr align="center">
+            <td>小明</td>
+            <td>男</td>
+            <td>会计</td>
+            <td>68</td>
+        </tr>
+        <tr align="center">
+            <td>小明</td>
+            <td>男</td>
+            <td>建筑</td>
+            <td>建筑设计</td>
+            <td>68</td>
+        </tr>
+    </table>
+    ```
+    效果：
+    <table border="5" align="center" width="600">
+        <caption>信息表</caption>
+        <tr bgcolor="pink">
+            <th colspan="3">学生基本信息</th>
+            <th colspan="2">成绩</th>
+        </tr>
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>专业</th>
+            <th>课程</th>
+            <th>分数</th>
+        </tr>
+        <tr align="center">
+            <td>球球</td>
+            <td>男</td>
+            <td rowspan="2">计算机</td>
+            <td rowspan="3">程序设计</td>
+            <td>68</td>
+        </tr>
+        <tr align="center">
+            <td>喃喃</td>
+            <td>女</td>
+            <td>89</td>
+        </tr>
+        <tr align="center">
+            <td>小明</td>
+            <td>男</td>
+            <td>会计</td>
+            <td>68</td>
+        </tr>
+        <tr align="center">
+            <td>小明</td>
+            <td>男</td>
+            <td>建筑</td>
+            <td>建筑设计</td>
+            <td>68</td>
+        </tr>
+    </table>
+9. Form表单
+    1. 作用：提交数据使页面具有交互性
+    2. 标签：
+    ```html
+    <form>
+        
+    </form>
+    属性：
+        action:提交的地址
+        name:表单名称
+        method:提交的方式GET/POST
+            1. GET提交数据不安全，会在地址栏显示；POST不会
+            2. GET提交数据大小有限制（不能大于2kb）；POST理论上没有限制
+    ```
+    3. form之间不可相互嵌套
