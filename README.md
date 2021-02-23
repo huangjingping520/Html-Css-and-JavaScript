@@ -249,16 +249,64 @@
     </table>
 9. Form表单
     1. 作用：提交数据使页面具有交互性
-    2. 标签：
+    2. form之间不可相互嵌套
+    3. 标签：<br>
+        属性：<br>
+            action:提交的地址<br>
+            name:表单名称<br>
+            method:提交的方式GET/POST<br>
+                1. GET提交数据不安全，会在地址栏显示；POST不会<br>
+                2. GET提交数据大小有限制（不能大于2kb）；POST理论上没有限制
     ```html
-    <form>
-        
+    <form action="" name="Login">
+        姓名：<input type="text" name="username">
+        <!-- text:单行完本框 -->
+        <br>
+        密码：<input type="password" name="password">
+        <!-- password:密码，不显示内容 -->
+        <br>
+        性别：<input type="radio" name="sex">男<input type="radio" name="sex">女
+        <!-- radio:单选框，但是选择后不消失，所以必须加上name -->
+        <br>
+        爱好：<input type="checkbox" name="lovelything">唱
+        <input type="checkbox" name="lovelything">跳
+        <input type="checkbox" name="lovelything">rap
+        <input type="checkbox" name="lovelything">篮球
+        <!-- checkbox:多选框 -->
+        <br>
+        <input type="submit" value="登录">
+        <!-- submit:提交，默认GET value:修改显示文字-->
+        <input type="reset">
+        <!-- reset:重置 同样可以使用value修改文字 -->
+        <input type="button" value="无功能">
+        <!-- button:按钮样式，无功能 -->
+        <button>提交</button>
+        <!-- button（标签）默认属性submit，同样也可以使用reset等属性 -->
     </form>
-    属性：
-        action:提交的地址
-        name:表单名称
-        method:提交的方式GET/POST
-            1. GET提交数据不安全，会在地址栏显示；POST不会
-            2. GET提交数据大小有限制（不能大于2kb）；POST理论上没有限制
     ```
-    3. form之间不可相互嵌套
+    <hr>
+    效果：
+    <form action="" name="Login">
+        姓名：<input type="text" name="username">
+        <!-- text:单行完本框 -->
+        <br>
+        密码：<input type="password" name="password">
+        <!-- password:密码，不显示内容 -->
+        <br>
+        性别：<input type="radio" name="sex">男<input type="radio" name="sex">女
+        <!-- radio:单选框，但是选择后不消失，所以必须加上name -->
+        <br>
+        爱好：<input type="checkbox" name="lovelything">唱
+        <input type="checkbox" name="lovelything">跳
+        <input type="checkbox" name="lovelything">rap
+        <input type="checkbox" name="lovelything">篮球
+        <!-- checkbox:多选框 -->
+        <br>
+        <input type="submit" value="登录">
+        <!-- submit:提交，默认GET value:修改显示文字-->
+        <input type="reset">
+        <!-- reset:重置 同样可以使用value修改文字 -->
+        <input type="button" value="无功能">
+        <!-- button:按钮样式，无功能 -->
+        <button>提交</button>
+        <!-- button（标签）默认属性submit，同样也可以使用reset等属性 -->
