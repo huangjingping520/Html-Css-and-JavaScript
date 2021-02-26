@@ -1,312 +1,333 @@
 # Html
+
 ### 超文本标记语言
+
 - HyperText Markup Language
+
 ### 作用
+
 - 写网页界面结构
+
 ### 文件后缀
+
 - .html、.htm
+
 ### 特点
-- Html不区分大小写，建议小写
-- Html由浏览器解析执行，由上往下，由左往右
-- HTML标签之间可以相互嵌套
+
+- Html 不区分大小写，建议小写
+- Html 由浏览器解析执行，由上往下，由左往右
+- HTML 标签之间可以相互嵌套
+
 ### 标签
-- 定义：Html由标签组成，包含在尖括号之间的内容
+
+- 定义：Html 由标签组成，包含在尖括号之间的内容
 - 分类
-    - 单标签 封闭类型标签
-    - 双标签 非封闭类型标签 空标签
+  - 单标签 封闭类型标签
+  - 双标签 非封闭类型标签 空标签
+
 ### 元素
+
 - 指开始标签到结束标签之间的内容
-### Html的属性
-- 描述html标签
+
+### Html 的属性
+
+- 描述 html 标签
 - 双标签写在开始标签里面
-- 一个标签有多个属性，且不区分前后顺序 
+- 一个标签有多个属性，且不区分前后顺序
+
 ### 注释
-- `<!--  -->`
+
+- `<!-- -->`
 - 注释中的内容不会显示在浏览器之中
+
 ### 基本结构
-- `<DOCTYPE>` 文档类型声明（<font color = red>不是html标签</font>）<br>
-    作用：告诉浏览器按当前标注解析代码<br>
-    > W3C标准之前，不同的浏览器对于页面的渲染有着不同的标准且存在差异，该模式称为**<font color = red>混杂模式</font>**；W3C标准出现之后，浏览器对于页面的渲染有了统一的标准，称为**<font color = red>标准模式</font>**
-        
+
+- `<!DOCTYPE>` 文档类型声明（<font color = red>不是 html 标签</font>）<br>
+  作用：告诉浏览器按当前标注解析代码<br>
+
+  > W3C 标准之前，不同的浏览器对于页面的渲染有着不同的标准且存在差异，该模式称为**<font color = red>混杂模式</font>**；W3C 标准出现之后，浏览器对于页面的渲染有了统一的标准，称为**<font color = red>标准模式</font>**
+
     <hr>
 
-    > <!doctype>不存在或者形式错误会使得HTML以混杂模式呈现，所以<!doctype>对于浏览器的兼容性有着重要意义
-        
-    目前使用的<!doctype html>属于HTML5标准，不区分大小写，双标记的结束标记可以省略（但是不建议省略）
+  > <!doctype>不存在或者形式错误会使得HTML以混杂模式呈现，所以<!doctype>对于浏览器的兼容性有着重要意义
 
-    HTML4.01 ==> 严格、过渡、框架集
+  目前使用的<!doctype html>属于 HTML5 标准，不区分大小写，双标记的结束标记可以省略（但是不建议省略）
 
-    XHTML ==> 严格的HTML，区分大小写，结束标记必须写上
+  HTML4.01 ==> 严格、过渡、框架集
 
-    DTD：文档类型声明，等同于DOCTYPE
+  XHTML ==> 严格的 HTML，区分大小写，结束标记必须写上
+
+  DTD：文档类型声明，等同于 DOCTYPE
+
 - head<br>
-    `<title>` 网页标题<br>
-    `<meta>` 用以告知文档的附加信息<br>
-    > charset : 字符集 中文开发网站常用UTF-8<br>
-    > name：<br>
-    > content：<br>
-    
-     `<head lang="en">` lang 表示告知网页主要语言
+  `<title>` 网页标题<br>
+  `<meta>` 用以告知文档的附加信息<br>
+  > charset : 字符集 中文开发网站常用 UTF-8<br>
+  > name：<br>
+  > content：<br> > `<head lang="en">` lang 表示告知网页主要语言
 - body<br>
-    网站内容
+  网站内容
+
 ### 常用标签
+
 1. 标题
-    ```html
-    <h1 align = "center">一级标题</h1>
-    <!-- 
-        属性：
-        align:水平对齐方式
-            属性值：
-            left:居左（默认值）
-            center：居中
-            right：居右
-        title：鼠标悬停时候显示的文字
-    -->
-    <h2>二级标题</h2>
-    <h3>三级标题</h3>
-    <h4>四级标题</h4>
-    <h5>五级标题</h5>
-    <h6>六级标题</h6>
-    ```
+   ```html
+   <h1 align="center">一级标题</h1>
+   <!-- 
+       属性：
+       align:水平对齐方式
+           属性值：
+           left:居左（默认值）
+           center：居中
+           right：居右
+       title：鼠标悬停时候显示的文字
+   -->
+   <h2>二级标题</h2>
+   <h3>三级标题</h3>
+   <h4>四级标题</h4>
+   <h5>五级标题</h5>
+   <h6>六级标题</h6>
+   ```
 2. 段落
-    ```html
-    <p>段落内容</p>
-    <!-- 
-        属性：
-        align:水平对齐方式
-            属性值：
-            left:居左（默认值）
-            center：居中
-            right：居右
-    -->
-    ```
+   ```html
+   <p>段落内容</p>
+   <!-- 
+       属性：
+       align:水平对齐方式
+           属性值：
+           left:居左（默认值）
+           center：居中
+           right：居右
+   -->
+   ```
 3. 强制换行<br/>
-    `<br/>`没有任何属性
+   `<br/>`没有任何属性
 4. 水平线<br>
-    - 分割上下文
-    ```html
-    <hr/>
-    <!-- 
-    属性：
-    color:颜色
-    width:宽度  设置水平方向（默认单位是px）
-    size:尺寸  设置垂直方向（默认单位是px）
-    align:水平对齐方式
-        属性值：
-        left:居左
-        center：居中（默认值）
-        right：居右
-    -->        
-    ```
+   - 分割上下文
+   ```html
+   <hr />
+   <!-- 
+   属性：
+   color:颜色
+   width:宽度  设置水平方向（默认单位是px）
+   size:尺寸  设置垂直方向（默认单位是px）
+   align:水平对齐方式
+       属性值：
+       left:居左
+       center：居中（默认值）
+       right：居右
+   -->
+   ```
 5. 图片
-    ```html
-    <img src="" alt="">
-    <!--
-        路径：
-            绝对路径：
-            1. 网址
-            2. 盘符
-            相对路径：
-            1. 平级  直接写
-            2. 下一级  / + 名称
-            3. 上一级  ../ + 名称
-               上两级  ../../ + 名称
-        常用图片格式：
-            jpg/jpeg
-            png（支持背景透明）
-            gif（支持动图）
-            psd（ps中保存的图片）
-        alt：
-            图片无法显示的时候显示的文字描述
-        title：
-            鼠标悬停的时候显示的文字描述
-        width/height：宽度/高度
-            当今设置一个的时候，图片两者会相同
-    -->
-    ```
+   ```html
+   <img src="" alt="" />
+   <!--
+       路径：
+           绝对路径：
+           1. 网址
+           2. 盘符
+           相对路径：
+           1. 平级  直接写
+           2. 下一级  / + 名称
+           3. 上一级  ../ + 名称
+              上两级  ../../ + 名称
+       常用图片格式：
+           jpg/jpeg
+           png（支持背景透明）
+           gif（支持动图）
+           psd（ps中保存的图片）
+       alt：
+           图片无法显示的时候显示的文字描述
+       title：
+           鼠标悬停的时候显示的文字描述
+       width/height：宽度/高度
+           当今设置一个的时候，图片两者会相同
+   -->
+   ```
 6. 文本格式化标签
 
-    ![](https://cdn.jsdelivr.net/gh/huangjingping520/PicGo/文本格式化.png)
+   ![](https://cdn.jsdelivr.net/gh/huangjingping520/PicGo/文本格式化.png)
+
 7. 列表<br>
-    1. 无序列表
-    ```html
-    基础结构：
-    <ul>
-        <li></li>
-    </ul>
-    a：超链接
-    <ul>
-        <li>
-            <a href="链接地址" target = "_blank"(新窗口)></a>
-        </li>
-    </ul>
-    ul 和 li 的属性：
-        type：设置项目符号的类型
-            取值：
-            disc 黑色实心圆
-            circle 空心圆
-            square 实心矩形
-            none 不显示
-    ```
-    2. 有序列表
-    ```html
-    <ol>
-        <li></li>
-    </ol>
-    属性：
-        type：设置符号的类型 1、a、A、I...
-        start：设置起始序号
-        reversed：倒序
-    ```
-    3. 自定义列表
-    ```html
-    <dl>
-        <dt>主题</dt>
-        <dd>描述</dd>
-    </dl>
-    ```
+   1. 无序列表
+   ```html
+   基础结构：
+   <ul>
+     <li></li>
+   </ul>
+   a：超链接
+   <ul>
+     <li>
+       <a href="链接地址" target="_blank" (新窗口)></a>
+     </li>
+   </ul>
+   ul 和 li 的属性： type：设置项目符号的类型 取值： disc 黑色实心圆 circle
+   空心圆 square 实心矩形 none 不显示
+   ```
+   2. 有序列表
+   ```html
+   <ol>
+     <li></li>
+   </ol>
+   属性： type：设置符号的类型 1、a、A、I... start：设置起始序号 reversed：倒序
+   ```
+   3. 自定义列表
+   ```html
+   <dl>
+     <dt>主题</dt>
+     <dd>描述</dd>
+   </dl>
+   ```
 8. 表格
-    ```html
-    <table border="5" align="center" width="600">
-        <caption>信息表</caption>
-        <tr bgcolor="pink">
-            <th colspan="3">学生基本信息</th>
-            <th colspan="2">成绩</th>
-        </tr>
-        <tr>
-            <th>姓名</th>
-            <th>性别</th>
-            <th>专业</th>
-            <th>课程</th>
-            <th>分数</th>
-        </tr>
-        <tr align="center">
-            <td>球球</td>
-            <td>男</td>
-            <td rowspan="2">计算机</td>
-            <td rowspan="3">程序设计</td>
-            <td>68</td>
-        </tr>
-        <tr align="center">
-            <td>喃喃</td>
-            <td>女</td>
-            <td>89</td>
-        </tr>
-        <tr align="center">
-            <td>小明</td>
-            <td>男</td>
-            <td>会计</td>
-            <td>68</td>
-        </tr>
-        <tr align="center">
-            <td>小明</td>
-            <td>男</td>
-            <td>建筑</td>
-            <td>建筑设计</td>
-            <td>68</td>
-        </tr>
-    </table>
-    ```
-    效果：
-    <table border="5" align="center" width="600">
-        <caption>信息表</caption>
-        <tr bgcolor="pink">
-            <th colspan="3">学生基本信息</th>
-            <th colspan="2">成绩</th>
-        </tr>
-        <tr>
-            <th>姓名</th>
-            <th>性别</th>
-            <th>专业</th>
-            <th>课程</th>
-            <th>分数</th>
-        </tr>
-        <tr align="center">
-            <td>球球</td>
-            <td>男</td>
-            <td rowspan="2">计算机</td>
-            <td rowspan="3">程序设计</td>
-            <td>68</td>
-        </tr>
-        <tr align="center">
-            <td>喃喃</td>
-            <td>女</td>
-            <td>89</td>
-        </tr>
-        <tr align="center">
-            <td>小明</td>
-            <td>男</td>
-            <td>会计</td>
-            <td>68</td>
-        </tr>
-        <tr align="center">
-            <td>小明</td>
-            <td>男</td>
-            <td>建筑</td>
-            <td>建筑设计</td>
-            <td>68</td>
-        </tr>
-    </table>
-9. Form表单
-    1. 作用：提交数据使页面具有交互性
-    2. form之间不可相互嵌套
-    3. 标签：<br>
-        属性：<br>
-            action:提交的地址<br>
-            name:表单名称<br>
-            method:提交的方式GET/POST<br>
-                1. GET提交数据不安全，会在地址栏显示；POST不会<br>
-                2. GET提交数据大小有限制（不能大于2kb）；POST理论上没有限制
-    ```html
-    <form action="" name="Login">
-        姓名：<input type="text" name="username">
-        <!-- text:单行完本框 -->
-        <br>
-        密码：<input type="password" name="password">
-        <!-- password:密码，不显示内容 -->
-        <br>
-        性别：<input type="radio" name="sex">男<input type="radio" name="sex">女
-        <!-- radio:单选框，但是选择后不消失，所以必须加上name -->
-        <br>
-        爱好：<input type="checkbox" name="lovelything">唱
-        <input type="checkbox" name="lovelything">跳
-        <input type="checkbox" name="lovelything">rap
-        <input type="checkbox" name="lovelything">篮球
-        <!-- checkbox:多选框 -->
-        <br>
-        <input type="submit" value="登录">
-        <!-- submit:提交，默认GET value:修改显示文字-->
-        <input type="reset">
-        <!-- reset:重置 同样可以使用value修改文字 -->
-        <input type="button" value="无功能">
-        <!-- button:按钮样式，无功能 -->
-        <button>提交</button>
-        <!-- button（标签）默认属性submit，同样也可以使用reset等属性 -->
-    </form>
-    ```
-    <hr>
-    效果：
-    <form action="" name="Login">
-        姓名：<input type="text" name="username">
-        <!-- text:单行完本框 -->
-        <br>
-        密码：<input type="password" name="password">
-        <!-- password:密码，不显示内容 -->
-        <br>
-        性别：<input type="radio" name="sex">男<input type="radio" name="sex">女
-        <!-- radio:单选框，但是选择后不消失，所以必须加上name -->
-        <br>
-        爱好：<input type="checkbox" name="lovelything">唱
-        <input type="checkbox" name="lovelything">跳
-        <input type="checkbox" name="lovelything">rap
-        <input type="checkbox" name="lovelything">篮球
-        <!-- checkbox:多选框 -->
-        <br>
-        <input type="submit" value="登录">
-        <!-- submit:提交，默认GET value:修改显示文字-->
-        <input type="reset">
-        <!-- reset:重置 同样可以使用value修改文字 -->
-        <input type="button" value="无功能">
-        <!-- button:按钮样式，无功能 -->
-        <button>提交</button>
-        <!-- button（标签）默认属性submit，同样也可以使用reset等属性 -->
+   ```html
+   <table border="5" align="center" width="600">
+     <caption>
+       信息表
+     </caption>
+     <tr bgcolor="pink">
+       <th colspan="3">学生基本信息</th>
+       <th colspan="2">成绩</th>
+     </tr>
+     <tr>
+       <th>姓名</th>
+       <th>性别</th>
+       <th>专业</th>
+       <th>课程</th>
+       <th>分数</th>
+     </tr>
+     <tr align="center">
+       <td>球球</td>
+       <td>男</td>
+       <td rowspan="2">计算机</td>
+       <td rowspan="3">程序设计</td>
+       <td>68</td>
+     </tr>
+     <tr align="center">
+       <td>喃喃</td>
+       <td>女</td>
+       <td>89</td>
+     </tr>
+     <tr align="center">
+       <td>小明</td>
+       <td>男</td>
+       <td>会计</td>
+       <td>68</td>
+     </tr>
+     <tr align="center">
+       <td>小明</td>
+       <td>男</td>
+       <td>建筑</td>
+       <td>建筑设计</td>
+       <td>68</td>
+     </tr>
+   </table>
+   ```
+   效果：
+   <table border="5" align="center" width="600">
+       <caption>信息表</caption>
+       <tr bgcolor="pink">
+           <th colspan="3">学生基本信息</th>
+           <th colspan="2">成绩</th>
+       </tr>
+       <tr>
+           <th>姓名</th>
+           <th>性别</th>
+           <th>专业</th>
+           <th>课程</th>
+           <th>分数</th>
+       </tr>
+       <tr align="center">
+           <td>球球</td>
+           <td>男</td>
+           <td rowspan="2">计算机</td>
+           <td rowspan="3">程序设计</td>
+           <td>68</td>
+       </tr>
+       <tr align="center">
+           <td>喃喃</td>
+           <td>女</td>
+           <td>89</td>
+       </tr>
+       <tr align="center">
+           <td>小明</td>
+           <td>男</td>
+           <td>会计</td>
+           <td>68</td>
+       </tr>
+       <tr align="center">
+           <td>小明</td>
+           <td>男</td>
+           <td>建筑</td>
+           <td>建筑设计</td>
+           <td>68</td>
+       </tr>
+   </table>
+9. Form 表单
+   1. 作用：提交数据使页面具有交互性
+   2. form 之间不可相互嵌套
+   3. 标签：<br>
+      属性：<br>
+      action:提交的地址<br>
+      name:表单名称<br>
+      method:提交的方式 GET/POST<br> 1. GET 提交数据不安全，会在地址栏显示；POST 不会<br> 2. GET 提交数据大小有限制（不能大于 2kb）；POST 理论上没有限制
+   ```html
+   <form action="" name="Login">
+     姓名：<input type="text" name="username" />
+     <!-- text:单行完本框 -->
+     <br />
+     密码：<input type="password" name="password" />
+     <!-- password:密码，不显示内容 -->
+     <br />
+     性别：<input type="radio" name="sex" />男<input
+       type="radio"
+       name="sex"
+     />女
+     <!-- radio:单选框，但是选择后不消失，所以必须加上name -->
+     <br />
+     爱好：<input type="checkbox" name="lovelything" />唱
+     <input type="checkbox" name="lovelything" />跳
+     <input type="checkbox" name="lovelything" />rap
+     <input type="checkbox" name="lovelything" />篮球
+     <!-- checkbox:多选框 -->
+     <br />
+     <input type="submit" value="登录" />
+     <!-- submit:提交，默认GET value:修改显示文字-->
+     <input type="reset" />
+     <!-- reset:重置 同样可以使用value修改文字 -->
+     <input type="button" value="无功能" />
+     <!-- button:按钮样式，无功能 -->
+     <button>提交</button>
+     <!-- button（标签）默认属性submit，同样也可以使用reset等属性 -->
+   </form>
+   ```
+      <hr>
+      <h2>效果：</h2>
+      <form action="" name="Login">
+          姓名：<input type="text" name="username">
+          <!-- text:单行完本框 -->
+          <br>
+          密码：<input type="password" name="password">
+          <!-- password:密码，不显示内容 -->
+          <br>
+          性别：<input type="radio" name="sex">男<input type="radio" name="sex">女
+          <!-- radio:单选框，但是选择后不消失，所以必须加上name -->
+          <br>
+          爱好：<input type="checkbox" name="lovelything">唱
+          <input type="checkbox" name="lovelything">跳
+          <input type="checkbox" name="lovelything">rap
+          <input type="checkbox" name="lovelything">篮球
+          <!-- checkbox:多选框 -->
+          <br>
+          <input type="submit" value="登录">
+          <!-- submit:提交，默认GET value:修改显示文字-->
+          <input type="reset">
+          <!-- reset:重置 同样可以使用value修改文字 -->
+          <input type="button" value="无功能">
+          <!-- button:按钮样式，无功能 -->
+          <button>提交</button>
+          <!-- button（标签）默认属性submit，同样也可以使用reset等属性 -->
+
+10.`<div>`和`<span>`</br>  
+- 两者没有语义，只是一个盒子用来装内容的
+    1. div标签用来布局，但一行只能放一个div，即`<div>`标签独占一行
+    2. span同样用来布局，但一行可以有多个span    
