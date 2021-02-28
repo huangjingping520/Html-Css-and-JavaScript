@@ -1,3 +1,18 @@
+<!-- TOC -->
+
+- [Html](#html)
+        - [超文本标记语言](#超文本标记语言)
+        - [作用](#作用)
+        - [文件后缀](#文件后缀)
+        - [特点](#特点)
+        - [标签](#标签)
+        - [元素](#元素)
+        - [Html 的属性](#html-的属性)
+        - [注释](#注释)
+        - [基本结构](#基本结构)
+        - [常用标签](#常用标签)
+
+<!-- /TOC -->
 # Html
 
 ### 超文本标记语言
@@ -141,7 +156,7 @@
        title：
            鼠标悬停的时候显示的文字描述
        width/height：宽度/高度
-           当今设置一个的时候，图片两者会相同
+           当只设置一个的时候，图片的两个属性 会相同
    -->
    ```
 6. 文本格式化标签
@@ -154,12 +169,6 @@
    基础结构：
    <ul>
      <li></li>
-   </ul>
-   a：超链接
-   <ul>
-     <li>
-       <a href="链接地址" target="_blank" (新窗口)></a>
-     </li>
    </ul>
    ul 和 li 的属性： type：设置项目符号的类型 取值： disc 黑色实心圆 circle
    空心圆 square 实心矩形 none 不显示
@@ -178,7 +187,11 @@
      <dd>描述</dd>
    </dl>
    ```
-8. 表格
+8. 表格<br>
+  `<caption>`标题<br>
+  `<tr>`行<br>
+  `<td>`列<br>
+  `<th>`表头：居中加粗<br>
    ```html
    <table border="5" align="center" width="600">
      <caption>
@@ -262,6 +275,11 @@
            <td>68</td>
        </tr>
    </table>
+  
+  表格结构标签：<br>
+    `<thead>`表格的头部区域<br>
+    `<tbody>`表格的主体区域
+
 9. Form 表单
    1. 作用：提交数据使页面具有交互性
    2. form 之间不可相互嵌套
@@ -278,10 +296,8 @@
      密码：<input type="password" name="password" />
      <!-- password:密码，不显示内容 -->
      <br />
-     性别：<input type="radio" name="sex" />男<input
-       type="radio"
-       name="sex"
-     />女
+     性别：<input type="radio" name="sex" />男
+     <input type="radio" name="sex" />女
      <!-- radio:单选框，但是选择后不消失，所以必须加上name -->
      <br />
      爱好：<input type="checkbox" name="lovelything" />唱
@@ -297,7 +313,7 @@
      <input type="button" value="无功能" />
      <!-- button:按钮样式，无功能 -->
      <button>提交</button>
-     <!-- button（标签）默认属性submit，同样也可以使用reset等属性 -->
+     <!-- button（标签）默认属性submit，同样也可以使用  reset等属性 -->
    </form>
    ```
       <hr>
@@ -331,3 +347,35 @@
 - 两者没有语义，只是一个盒子用来装内容的
     1. div标签用来布局，但一行只能放一个div，即`<div>`标签独占一行
     2. span同样用来布局，但一行可以有多个span    
+
+11. 超链接<br>
+  ```html
+  <a href="" target=""></a>
+  href:必须属性，用于指定连接目标的url
+  target:用于指定链接的打开方式，_self在当前页面打开（默认值），_blank在新窗口打开
+   ```
+  >分类:<br>
+    1. 外部链接：如<br>
+    ```html
+    <a href="https://www.baidu.com">百度</a>
+    ```<br>
+    2. 内部链接：网站内部页面的相互链接，直接链接内部页面名称即可。如<br>
+    ```html
+    <a href="index.html">首页</a>
+    ```<br>
+    3. 空链接：如果当时没有确定链接目标时，使用空链接<br>
+    ```html
+    <a href="#">首页</a>
+    ```<br>
+    4. 下载链接：如果href中的地址是一个文件或者压缩包，则会下载这个文件<br>
+    5. 网页元素链接：在网页中的各种网页元素，如文本、图像、表格、音频、视频等都可以添加超链接<br>
+    ```html
+    <a href="https://www.baidu.com"><img src=img.jpg></a>
+    ```<br>
+    6. 锚点链接：当我们点击链接，可以快速定位到页面中的某个位置<br>
+      (1) 在链接文本的href中，设置属性值为“#名字”的形式，如<br>
+      <a href="#two">第二集</a><br>
+      (2)找到目标位置标签，里面添加一个id属性=名字，如<h3 id="two">第二集</h3>
+12. 特殊字符<br>
+  如下表
+  ![](https://cdn.jsdelivr.net/gh/huangjingping520/PicGo/特殊字符.JPG)
