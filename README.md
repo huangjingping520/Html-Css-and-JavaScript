@@ -103,6 +103,7 @@
    <h5>五级标题</h5>
    <h6>六级标题</h6>
    ```
+   
 2. 段落
    ```html
    <p>段落内容</p>
@@ -115,8 +116,10 @@
            right：居右
    -->
    ```
+   
 3. 强制换行<br/>
    `<br/>`没有任何属性
+   
 4. 水平线<br>
    - 分割上下文
    ```html
@@ -133,6 +136,7 @@
        right：居右
    -->
    ```
+   
 5. 图片
    ```html
    <img src="" alt="" />
@@ -159,6 +163,7 @@
            当只设置一个的时候，图片的两个属性 会相同
    -->
    ```
+   
 6. 文本格式化标签
 
    ![](https://cdn.jsdelivr.net/gh/huangjingping520/PicGo/文本格式化.png)
@@ -170,7 +175,8 @@
    <ul>
      <li></li>
    </ul>
-   ul 和 li 的属性： type：设置项目符号的类型 取值： disc 黑色实心圆 circle
+   ul 和 li 的属性： 
+   type：设置项目符号的类型 取值： disc 黑色实心圆 circle
    空心圆 square 实心矩形 none 不显示
    ```
    2. 有序列表
@@ -178,7 +184,8 @@
    <ol>
      <li></li>
    </ol>
-   属性： type：设置符号的类型 1、a、A、I... start：设置起始序号 reversed：倒序
+   属性： 
+   type：设置符号的类型 1、a、A、I... start：设置起始序号 reversed：倒序
    ```
    3. 自定义列表
    ```html
@@ -187,11 +194,13 @@
      <dd>描述</dd>
    </dl>
    ```
+   
 8. 表格<br>
-  `<caption>`标题<br>
-  `<tr>`行<br>
-  `<td>`列<br>
-  `<th>`表头：居中加粗<br>
+    `<caption>`标题<br>
+    `<tr>`行<br>
+    `<td>`列<br>
+    `<th>`表头：居中加粗<br>
+   
    ```html
    <table border="5" align="center" width="600">
      <caption>
@@ -275,10 +284,12 @@
            <td>68</td>
        </tr>
    </table>
-  
+
   表格结构标签：<br>
     `<thead>`表格的头部区域<br>
-    `<tbody>`表格的主体区域
+    用于定义表格头部，其内部必须拥有`<tr>`标签,一般位于第一行<br>
+    `<tbody>`表格的主体区域<br>
+    用于定义表格的主体，主要用于放数据本体
 
 9. Form 表单
    1. 作用：提交数据使页面具有交互性
@@ -316,8 +327,9 @@
      <!-- button（标签）默认属性submit，同样也可以使用  reset等属性 -->
    </form>
    ```
-      <hr>
-      <h2>效果：</h2>
+   **效果：**
+
+
       <form action="" name="Login">
           姓名：<input type="text" name="username">
           <!-- text:单行完本框 -->
@@ -343,7 +355,111 @@
           <button>提交</button>
           <!-- button（标签）默认属性submit，同样也可以使用reset等属性 -->
 
-10.`<div>`和`<span>`</br>  
+   4. 文件
+
+      `````html
+      <form name="form" enctype="multipart/form-data">
+          <!--当需要使用文件时，需要更改form表单的编码格式，即enctype="multipart/form-data"-->
+          <p>
+              文件：<input type="file">
+          </p>
+      </form>
+      `````
+
+   5. 隐藏域
+
+      定义隐藏字段隐藏字段对用户不可见。常常用来存储默认值，或者由JavaScript改变它们的值
+
+      ````html
+      <form>
+          <p>
+              <input type="hidden">
+          </p>
+      </form>
+      ````
+
+   6. 图片提交按钮
+
+      ```html
+      <form>
+          <p>
+              <input type="image">
+          </p>
+      </form>
+      ```
+
+   7. 下拉列表
+
+      ````html
+      <form>
+          <select name="city">
+              <option>北京</option>
+              <option>上海</option>
+              <option>南京</option>
+              <option>湖南</option>
+              <option>河北</option>
+          </select>
+      </form>
+      ````
+
+      <form>
+          <select name="city">
+              <option>北京</option>
+              <option>上海</option>
+              <option>南京</option>
+              <option>湖南</option>
+              <option>河北</option>
+          </select>
+      </form>
+
+      ```html
+      <form>
+          <select name="city">
+              <optiongroup label="北京">
+              	<option>朝阳</option>
+                  <option>海淀</option>
+                  <option>大兴</option>
+              </optiongroup>
+              <optiongroup label="江西">
+              	<option>南昌</option>
+                  <option>抚州</option>
+                  <option>赣州</option>
+              </optiongroup>
+          </select>
+      </form>
+      ```
+
+      <form>
+          <select name="city">
+              <optgroup label="北京">
+              	<option>朝阳</option>
+                  <option>海淀</option>
+                  <option>大兴</option>
+              </optiongroup>
+              <optgroup label="江西">
+              	<option>南昌</option>
+                  <option>抚州</option>
+                  <option>赣州</option>
+              </optiongroup>
+          </select>
+      </form>
+
+   8. 多行文本框
+
+      ```html
+      <textarea name="留言" cols="30" rows="10">
+      
+      </textarea>
+      ```
+
+      留言：
+
+      <textarea name="留言" cols="30" rows="10"></textarea>
+
+      
+
+10. `<div>`和`<span>`</br>  
+
 - 两者没有语义，只是一个盒子用来装内容的
     1. div标签用来布局，但一行只能放一个div，即`<div>`标签独占一行
     2. span同样用来布局，但一行可以有多个span    
@@ -353,7 +469,7 @@
   <a href="" target=""></a>
   href:必须属性，用于指定连接目标的url
   target:用于指定链接的打开方式，_self在当前页面打开（默认值），_blank在新窗口打开
-   ```
+  ```
   >分类:<br>
     1. 外部链接：如<br>
     ```html
@@ -376,6 +492,7 @@
       (1) 在链接文本的href中，设置属性值为“#名字”的形式，如<br>
       <a href="#two">第二集</a><br>
       (2)找到目标位置标签，里面添加一个id属性=名字，如<h3 id="two">第二集</h3>
+    ```
 12. 特殊字符<br>
-  如下表
-  ![](https://cdn.jsdelivr.net/gh/huangjingping520/PicGo/特殊字符.JPG)
+    如下表
+    ![](https://cdn.jsdelivr.net/gh/huangjingping520/PicGo/特殊字符.JPG)
