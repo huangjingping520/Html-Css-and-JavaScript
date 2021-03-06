@@ -31,6 +31,10 @@
         - [`<div>`和`<span>`</br>](#div和spanbr)
         - [超链接](#超链接)
         - [特殊字符](#特殊字符)
+    - [语义化标签](#语义化标签)
+        - [优势](#优势)
+        - [H5新增语义化标签](#h5新增语义化标签)
+- [CSS](#css)
 
 <!-- /TOC -->
 # Html
@@ -685,3 +689,127 @@ type：设置符号的类型 1、a、A、I... start：设置起始序号 reverse
    </details
 
 3. mark-- 主要用来在视觉上向用户呈现那些需要突出的文字
+
+4. meter--（刻度）定义度量衡，仅用于已知最大值和最小值的度量
+
+   1. low：最低临界点
+   2. high：最高临界点
+   3. min：最小值
+   4. max：最大值
+   5. value：当前值
+
+5. progress--（进度条）运行中的进程，可以用progress标签来显示Javascript中耗费时间的函数的进程
+
+6. datalist--定义可选数据的列表。
+
+   与input元素配合，就可以制作出输入值的下拉列表。
+
+   datalist及其选项不会被显示出来，仅仅是合法的输入值列表
+
+7. canvas--定义图形，如图标和其他图像。
+
+   该标签是为了客户端矢量图设计的，其本身没有行为，但却把一个绘图API展现给JavaScript以使脚本能够把想绘制的东西 都绘制到一块画布上
+
+# CSS
+
+## 作用
+
+1. 让网页具有美观一致的页面
+2. 内容与格式分离
+
+## 概念
+
+CSS(Cascading Style Sheets)层叠样式表，又叫级联样式表
+
+1. 用于HTML文档中元素样式的定义
+
+   实现了将内容与表现分离
+
+   提高代码的可重用性和可维护性
+
+2. .css
+
+## 特征
+
+<img src="https://cdn.jsdelivr.net/gh/huangjingping520/PicGo/css%E7%89%B9%E7%82%B9.PNG" style="zoom:80%;" />
+
+## CSS引入方式
+
+1. 内联样式----只对当前元素生效
+
+   由于将表现和内容混杂在一起，内联样式会损失掉样式表的许多优势。<font color="red">慎用！！！</font>
+
+   要使用内联样式，需要在相关的标签内使用样式（style）属性。Style属性可以包含任何CSS属性
+
+   **缺乏整体性和规划性，不利于维护，维护成本高**
+
+   ```html
+   <p style="background:pink;color:red;font-size:25px;">
+       CSS
+   </p>
+   ```
+
+   效果：
+
+   <p style="background:pink;color:red;font-size:25px;">
+       CSS
+   </p>
+
+2. 内部样式----只对当前页面生效
+
+   当单个文档需要特殊的样式时，就应该使用内部样式表。可以使用`<style>`标签在文档头部定义内部样式表
+
+   ```html
+   <head>
+       <style>
+           选择器{
+               属性:属性值;
+               属性:属性值;
+               属性:属性值;
+               属性:属性值;
+               属性:属性值;
+           }
+       </style>
+   </head>
+   ```
+
+   选择器的作用：选中写样式的元素
+
+
+3. 外部样式--实现了内容与表现的分离，提高了代码的可重用性和可维护性
+   
+   1. 新建`.css`文件
+   
+      同一个`.css`可以被多个html引入
+   
+   2. 在`head`中用`link`引入
+   
+      ```html
+      <link rel="stylesheet" href=".css">
+      ```
+   
+4. 导入式--不推荐使用
+
+   ```html
+   <head>
+       <style>
+       	@import ".css";
+       </style>
+   </head>
+   或者
+   <head>
+       <style>
+       	@import url(".css");
+       </style>
+   </head>
+   ```
+
+   **@import与link的区别：**
+
+   1. 加载顺序不同
+
+      @import会先加载html再加载css
+
+      link则是同时加载
+
+   2. 
