@@ -157,10 +157,10 @@
 -->
 ```
 
-### 强制换行<br/>
+### 强制换行
 `<br/>`没有任何属性
 
-### 水平线<br>
+### 水平线
 
 - 分割上下文
 ```html
@@ -210,7 +210,7 @@ align:水平对齐方式
 
 ![](https://cdn.jsdelivr.net/gh/huangjingping520/PicGo/文本格式化.png)
 
-### 列表<br>
+### 列表
 
 1. 无序列表
 ```html
@@ -238,11 +238,14 @@ type：设置符号的类型 1、a、A、I... start：设置起始序号 reverse
 </dl>
 ```
 
-### 表格<br>
-`<caption>`标题<br>
-`<tr>`行<br>
-`<td>`列<br>
-`<th>`表头：居中加粗<br>
+### 表格
+`<caption>`标题
+
+`<tr>`行
+
+`<td>`列
+
+`<th>`表头：居中加粗
 
 ```html
 <table border="5" align="center" width="600">
@@ -901,6 +904,38 @@ p{
 }
 ```
 
+### 关系选择器
+
+#### 后代选择器
+
+1. 语法
+
+   `E F{}`
+
+2. 选中E 中后代所有的F
+
+#### 子代选择器
+
+1. 语法
+
+   `E>F{}`
+
+2. 选中E中子代 的F
+
+#### 相邻兄弟选择器
+
+1. 语法
+
+   `E+F{}`
+
+#### 通用兄弟选择器
+
+1. 语法
+
+   `E~F{}`
+
+
+
 ## 属性
 
 ### 字体
@@ -985,6 +1020,28 @@ line-through 删除线
 
 overline 上划线
 
+#### 英文字母大小写转换
+
+`text-transform`
+
+uppercase:转换为大写
+
+lowercase:转换为小写
+
+capitalize:首字母大写
+
+#### 首行缩进
+
+`text-indent`
+
+取值：
+
+px：绝对单位
+
+em：相对单位    相对于当前字体大小
+
+rem：相对单位
+
 ### 列表
 
 #### 设置项目符号
@@ -1012,3 +1069,112 @@ outside(默认)/inside
 设置的是一行文字的高度，当行高等于高，一行文字垂直居中
 
 ### 背景
+
+#### 颜色
+
+`background-color`
+
+默认值：transparent
+
+取值：
+
+1. 16进制
+2. 关键字
+3. rgb()、rgba()
+
+#### 图片
+
+`background-image:url("img路径")`
+
+默认水平垂直平铺
+
+> 与img元素的对比
+>
+> img：父元素放不下的时候会溢出
+>
+> background-image：父元素有多大就会显示多大
+
+#### 图片是否平铺
+
+`background-repeat`
+
+默认值：repeat(平铺)
+
+no-repeat(不平铺)
+
+repeat-x(水平平铺)
+
+repeat-y(垂直平铺)
+
+#### 大小
+
+`background-size:x y`
+
+取值：px   %   
+
+cover  覆盖整个背景区域，背景图片可能显示不完全  
+
+contain  背景图片拉甚至足够大，但是背景区域可能覆盖不完全
+
+#### 定位
+
+`background-position:x y`
+
+默认在左上角
+
+取值：px  %  left right top bottom center
+
+当只取一个值，第二个默认居中
+
+#### 固定
+
+`background-attachment`
+
+scroll/fixed
+
+### 内容溢出
+
+#### 元素内容溢出
+
+`overflow`
+
+hidden:隐藏溢出部分
+
+auto:溢出部分会存在滚动条，不溢出则没有
+
+scroll:无论是否溢出都会存在
+
+#### 一行文字溢出省略号显示
+
+`white-space`
+
+nowrap:不换行
+
+`overflow`
+
+hidden
+
+`text-overflow`
+
+clip:直接裁剪
+
+ellipsis:省略号
+
+### 表格
+
+#### 边框折叠
+
+`border-collapse`
+
+### Others
+
+#### 字符之间的距离
+
+`letter-spacing`
+
+#### `vertical-align`
+
+1. td中：内容的垂直对齐方式
+2. 非td中：容器中元素和内容的垂直对齐方式
+
+## CSS盒子模型（Box Model）
